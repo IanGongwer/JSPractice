@@ -1,14 +1,38 @@
-let black_text = true;
+let colors = {0: 'black', 1: 'red', 2: 'blue', 3: 'green', 4: 'yellow'};
+
+let activeColor = 1;
 
 function changeText() {
-    if(black_text) {
-        document.getElementById('header').innerHTML = 'Red'
-        document.getElementById('header').style.color = 'red'
-        black_text = false;
-    }
-    else {
-        document.getElementById('header').innerHTML = 'Black'
-        document.getElementById('header').style.color = 'black'
-        black_text = true;
+    switch(activeColor) {
+        case 0:
+            document.getElementById('header').innerHTML = 'Black';
+            document.getElementById('header').style.color = 'black';
+            document.body.style.backgroundColor = 'black';
+            activeColor++;
+            break;
+        case 1:
+            document.getElementById('header').innerHTML = 'Red';
+            document.getElementById('header').style.color = 'red';
+            document.body.style.backgroundColor = 'red';
+            activeColor++;
+            break;
+        case 2:
+            document.getElementById('header').innerHTML = 'Blue';
+            document.getElementById('header').style.color = 'blue';
+            document.body.style.backgroundColor = 'blue';
+            activeColor++;
+            break;
+        case 3:
+            document.getElementById('header').innerHTML = 'Green';
+            document.getElementById('header').style.color = 'green';
+            document.body.style.backgroundColor = 'green';
+            activeColor++;
+            break;
+        case 4:
+            document.getElementById('header').innerHTML = 'Yellow';
+            document.getElementById('header').style.color = 'yellow';
+            document.body.style.backgroundColor = 'yellow';
+            activeColor = 0;
+            break;
     }
 }

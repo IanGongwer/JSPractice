@@ -1,0 +1,10 @@
+#header {
+    display: inline;
+    background-color: white;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+}
